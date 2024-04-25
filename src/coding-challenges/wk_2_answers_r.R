@@ -9,19 +9,19 @@
 # Notes
 # If the input tries to divide by 0, return: "Can't divide by 0!"
 
-# calculator<-function(value1,operator,value2){
-#   value<-case_when(operator=="+"~ value1+value2,
-#             operator=="-"~ value1-value2,
-#             operator=="*"~ value1*value2,
-#             operator=="/" & value2==0 ~ NA,
-#             operator=="/" & value2!=0 ~ value1/value2
-#         )
-#   case_when(is.na(value)~"Can't divide by 0!",
-#             !is.na(value)~ as.character(value))
+calculator<-function(value1,operator,value2){
+  value<-case_when(operator=="+"~ value1+value2,
+            operator=="-"~ value1-value2,
+            operator=="*"~ value1*value2,
+            operator=="/" & value2==0 ~ NA,
+            operator=="/" & value2!=0 ~ value1/value2
+        )
+  case_when(is.na(value)~"Can't divide by 0!",
+            !is.na(value)~ as.character(value))
   
-# }
+}
 
-# calculator(2,"*",0)
+calculator(2,"*",0)
 
 
 # Medium
@@ -53,15 +53,15 @@
 # Profit = Total Sales - Total Cost
 
 
-# profit<-function(dictionary){
-#   cost_price<-dictionary[["cost_price"]]
-#   sell_price<-dictionary[["sell_price"]]
-#   inventory<-dictionary[["inventory"]]
-#   round((sell_price-cost_price)*inventory,0)
+profit<-function(dictionary){
+  cost_price<-dictionary[["cost_price"]]
+  sell_price<-dictionary[["sell_price"]]
+  inventory<-dictionary[["inventory"]]
+  round((sell_price-cost_price)*inventory,0)
 
-#   }
+  }
 
-# profit(list(cost_price=32.67,sell_price=45.00,inventory=1200))
+profit(list(cost_price=32.67,sell_price=45.00,inventory=1200))
 
 
 # Hard:
